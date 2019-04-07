@@ -52,6 +52,7 @@ transition: color 0.4s ease;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 20;
+  height: 6vw;
 }
 .section1{
   background-image:url(../img/imagen-prueba.png);
@@ -133,4 +134,9 @@ transition: color 0.4s ease;
   background-color: #2E3192;
   color: white;
   transform: rotateY(180deg);
+}
+
+.mx-auto {
+  position: relative;
+  top: 1vw;
 }
