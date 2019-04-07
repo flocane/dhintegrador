@@ -12,7 +12,7 @@
   <body>
     <div class="container-fluid px-0">
       <nav class="navbar navbar-expand-lg navbar-light ">
-<a class="navbar-brand" href="#">Navbar</a>
+<a class="navbar-brand" href="#">Aurora Materiales</a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -46,7 +46,7 @@
 
         <section class="section2 row mx-0">
             <!-- PRIMERA CARD -->
-            <article class="articulo1 p-0 col-xs-12 col-md-6 col-lg-6">
+            <article class="articulo1 p-0 col-12 col-md-6 col-lg-6">
               <div class="flip-card">
                 <div class="flip-card-inner">
                   <div class="flip-card-front">
@@ -61,7 +61,7 @@
                 </div>
             </article>
                 <!-- SEGUNDA CARD -->
-            <article class="articulo2 p-0 col-xs-12 col-md-6 col-lg-6">
+            <article class="articulo2 p-0 col-12 col-md-6 col-lg-6">
               <div class="flip-card">
                 <div class="flip-card-inner">
                   <div class="flip-card-front">
@@ -263,10 +263,10 @@
                   <li><a href="#">Sobre Nosotros</a> </li>
                 </ul>
                 <p class="iconos">
-                  <i class="fab fa-whatsapp"></i>
-                  <i class="fab fa-facebook"></i>
+                  <i class="fab fa-whatsapp"><a href="http://wa.me/541130847961?text=hola queria realizar el siguiente pedido "></a></i>
+                  <i class="fab fa-facebook"><a href="https://www.facebook.com/Aurora-Materiales-1531611110225827/"></a></i>
                   <i class="fab fa-instagram"></i>
-                  <i class="fab fa-youtube"></i>
+                  <i class="fab fa-youtube"><a href="https://www.youtube.com/"></a></i>
                 </p>
               </div>
               <div class="col-12 col-md-4">
@@ -274,7 +274,7 @@
                 <p>Arregui 6066</p>
                 <p>Tel 4641-3428 / 4642-3139</p>
               </div>
-              <div class="col-md-4 ocultar">
+              <div class="d-none d-md-block col-md-4">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.066965810513!2d-58.52232268476974!3d-34.627747980453336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc83004f56f3d%3A0x4cb567431cac3e4d!2sAurora+Materiales+S.A!5e0!3m2!1ses-419!2sar!4v1554669253895!5m2!1ses-419!2sar" width="300" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
               </div>
                 <hr>
