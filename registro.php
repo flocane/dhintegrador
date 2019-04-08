@@ -63,15 +63,6 @@ if ($_POST){
         <?php endforeach;
       echo "</ul>";
       endif;?>
-    <?php
-      if(isset($errores)):?>
-        <ul class="alert alert-danger">
-          <?php
-          foreach ($errores as $key => $value) :?>
-            <li> <?=$value;?> </li>
-            <?php endforeach;?>
-        </ul>
-      <?php endif;?>
 <div class="container">
     <div class="row">
         <div class="col-md-12">
