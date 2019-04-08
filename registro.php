@@ -78,6 +78,8 @@ if ($_POST){
             <div class="well well-sm">
                 <form class="form-horizontal" method="post">
                     <fieldset>
+                    <br>
+                    <br>
                         <legend class="text-center header">Formulario de Registro de Usuarios</legend>
                         <div class="form-group"> <!-- Nombre -->
                         <label for="full_name_id" class="control-label">Nombre</label>
