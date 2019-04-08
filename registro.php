@@ -1,8 +1,13 @@
 <?php
-include_once("funciones.php");
-
-if ($_POST) {
-  $errores =validar($_POST);
+include_once("controladores/funciones.php");
+if ($_POST){
+  $errores=validar($_POST);
+  if (count($errores)===0) {
+    $registro= armarRegistro($_POST);
+    guardar($registro);
+    header("location:login.php");
+    exit;
+  }
 }
 
 ?>
@@ -17,16 +22,8 @@ if ($_POST) {
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Crete+Round|Josefin+Sans|Montserrat+Alternates" rel="stylesheet">
   </head>
+
 <body>
-  <!-- <div class="container"> -->
-  <ul>
-      <?php
-        if(isset($errores)){
-          foreach ($errores as $key => $value) :?>
-            <li class="alert alert-danger"><?=$value;?> </li>  
-          <?php endforeach;
-        }
-      ?>
 <div class="container-fluid px-0">
       <nav class="navbar navbar-expand-lg navbar-light ">
 <a class="navbar-brand" href="#">Aurora Materiales</a>
@@ -59,13 +56,29 @@ if ($_POST) {
 <br>
 <br>
 <br>
+<?php if(isset($errores)):
+      echo "<ul class='alert alert-danger text-center'>";
+      foreach ($errores as $key => $value) :?>
+        <li><?=$value;?> </li>
+        <?php endforeach;
+      echo "</ul>";
+      endif;?>
+    <?php 
+      if(isset($errores)):?>
+        <ul class="alert alert-danger">
+          <?php
+          foreach ($errores as $key => $value) :?>
+            <li> <?=$value;?> </li>
+            <?php endforeach;?>
+        </ul>
+      <?php endif;?> 
 <div class="container">
     <div class="row">
         <div class="col-md-12">
             <div class="well well-sm">
                 <form class="form-horizontal" method="post">
                     <fieldset>
-                        <legend class="text-center header">Formulario de Contacto</legend>
+                        <legend class="text-center header">Formulario de Registro de Usuarios</legend>
                         <div class="form-group"> <!-- Nombre -->
                         <label for="full_name_id" class="control-label">Nombre</label>
                         <input type="text" class="form-control" id="Nombre" name="nombre" placeholder="Ingresar Nombre">
@@ -74,31 +87,26 @@ if ($_POST) {
                         <label for="apellido" class="control-label">Apellido</label>
                         <input type="text" class="form-control" id="Apellido" name="apellido" placeholder="Ingresar Apellido">
                         </div>
-                        <div class="form-group"> <!-- Domicilio -->
-                            <label for="domicilio" class="control-label">Domicilio</label>
-                            <input type="text" class="form-control" id="Domicilio" name="domicilio" placeholder="Ingresar su Domiclio">
-                        </div>
-                        <div class="form-group"> <!-- Telefono -->
-                            <label for="telefono" class="control-label">Telefono</label>
-                            <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Ingresar numero telefonico de Conctato">
+                        <div class="form-group"> <!-- Usuario -->
+                            <label for="usuario" class="control-label">Usuario</label>
+                            <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Ingresar Nombre de Usuario">
                         </div>
                         <div class="form-group"> <!-- E-mail -->
                             <label for="email" class="control-label">E-mail</label>
                             <input type="text" class="form-control" id="email" name="email" placeholder="Ingresar numero e-mail de Conctato">
                         </div>
-                        <div class="form-group"> <!-- Ciudad-->
-                            <label for="ciudad" class="control-label">Ciudad</label>
-                            <input type="text" class="form-control" id="ciudad" name="ciudad" placeholder="Ciudad o Localidad">
+                        <div class="form-group"> <!-- Password -->
+                            <label for="password" class="control-label">Contraseña</label>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Ingresar Contraseña del usuario">
                         </div>
-                        <div class="form-group"><!-- Contacto-->
-                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon">Contacto</i>
-                            </span>
-                        <div class="col-md-8"> <!-- Ingresar la Consulta-->
-                            <textarea class="form-control" id="mensaje" name="mensaje" placeholder="Ingrese la consulta." rows="7"></textarea>
+                        <div class="form-group"> <!--Confirmacion de Password -->
+                            <label for="repassword" class="control-label">Confirmar Contaseña</label>
+                            <input type="password" class="form-control" id="repassword" name="repassword" placeholder="Ingresar Confirmacion de Contraseña del usuario">
                         </div>
-                        <div class="form-group"> <!-- Boton de Enviar-->
+                        </div>
+                        <div class="form-group"> <!-- Boton de Enviar Registro-->
                           <div class="col-md-12 text-center">
-                           <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+                           <button type="submit" class="btn btn-primary btn-lg">Registrame</button>
                           </div>
                         </div>
                     </fieldset>
