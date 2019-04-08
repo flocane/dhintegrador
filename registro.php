@@ -32,8 +32,8 @@ if ($_POST){
 </button>
 <div class="collapse navbar-collapse" id="navbarNav">
   <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" href="index.php">Home </a>
+    <li class="nav-item active">
+      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#">Productos</a>
@@ -44,8 +44,8 @@ if ($_POST){
     <li class="nav-item">
       <a class="nav-link" href="#" >Sobre Nosotros</a>
     </li>
-    <li class="nav-item  active">
-      <a class="nav-link" href="registro.php" >Registrate <span class="sr-only">(current)</span></a>
+    <li class="nav-item">
+      <a class="nav-link" href="registro.php" >Registrate</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="login.html" >Ingresa</a>
@@ -63,7 +63,7 @@ if ($_POST){
         <?php endforeach;
       echo "</ul>";
       endif;?>
-    <?php
+    <?php 
       if(isset($errores)):?>
         <ul class="alert alert-danger">
           <?php
@@ -71,7 +71,7 @@ if ($_POST){
             <li> <?=$value;?> </li>
             <?php endforeach;?>
         </ul>
-      <?php endif;?>
+      <?php endif;?> 
 <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -120,7 +120,7 @@ if ($_POST){
             <div class=" col-12 col-md-4">
               <h3>Aurora Materiales </h3>
                 <ul>
-                  <li><a href="formulario.php">Contacto</a> </li>
+                  <li><a href="#">Contacto</a> </li>
                   <li><a href="#">Institucional</a> </li>
                   <li><a href="#">Sobre Nosotros</a> </li>
                 </ul>
