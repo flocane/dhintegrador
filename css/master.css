@@ -156,3 +156,15 @@ transition: color 0.4s ease;
    display: none;
  }
 }
+
+.titulo-seccion {
+  font-size: 2em;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+}
+
+.card-titulo {
+  background-color: none;
+}

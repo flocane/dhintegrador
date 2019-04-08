@@ -23,7 +23,7 @@ if ($_POST) {
       <?php
         if(isset($errores)){
           foreach ($errores as $key => $value) :?>
-            <li class="alert alert-danger"><?=$value;?> </li>  
+            <li class="alert alert-danger"><?=$value;?> </li>
           <?php endforeach;
         }
       ?>
@@ -35,14 +35,14 @@ if ($_POST) {
 </button>
 <div class="collapse navbar-collapse" id="navbarNav">
   <ul class="navbar-nav">
-    <li class="nav-item active">
-      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+    <li class="nav-item">
+      <a class="nav-link" href="index.php">Home </a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#">Productos</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="formulario.php">Contacto</a>
+    <li class="nav-item active">
+      <a class="nav-link" href="formulario.php">Contacto<span class="sr-only">(current)</span></a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#" >Sobre Nosotros</a>
@@ -112,7 +112,7 @@ if ($_POST) {
             <div class=" col-12 col-md-4">
               <h3>Aurora Materiales </h3>
                 <ul>
-                  <li><a href="#">Contacto</a> </li>
+                  <li><a href="formulario.php">Contacto</a> </li>
                   <li><a href="#">Institucional</a> </li>
                   <li><a href="#">Sobre Nosotros</a> </li>
                 </ul>
