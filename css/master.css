@@ -177,5 +177,10 @@ transition: color 0.4s ease;
 .lista{
   color: orange;
   font-weight: bold;
-  font-size: 5em;
+  font-size: 2em;
+}
+.descripcion{
+  font-size: 1rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
 }

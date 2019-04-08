@@ -1,5 +1,5 @@
 <?php
-include_once("controladores/funciones.php");
+include_once("funciones.php");
 if ($_POST){
   $errores=validar($_POST);
   if (count($errores)===0) {
