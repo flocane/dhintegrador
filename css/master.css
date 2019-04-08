@@ -168,3 +168,14 @@ transition: color 0.4s ease;
 .card-titulo {
   background-color: none;
 }
+.sobre{
+  background-image:url(../img/cal.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.lista{
+  color: orange;
+  font-weight: bold;
+  font-size: 5em;
+}

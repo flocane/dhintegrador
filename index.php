@@ -19,7 +19,7 @@
 <div class="collapse navbar-collapse" id="navbarNav">
   <ul class="navbar-nav">
     <li class="nav-item active">
-      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#">Productos</a>
@@ -28,13 +28,13 @@
       <a class="nav-link" href="formulario.php">Contacto</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#" >Sobre Nosotros</a>
+      <a class="nav-link" href="about.php" >Sobre Nosotros</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="registro.php" >Registrate</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="login.html" >Ingresa</a>
+      <a class="nav-link" href="login.php" >Ingresa</a>
     </li>
   </ul>
 </div>
@@ -263,10 +263,10 @@
                   <li><a href="#">Sobre Nosotros</a> </li>
                 </ul>
                 <p class="iconos">
-                  <i class="fab fa-whatsapp"><a href="http://wa.me/541130847961?text=hola queria realizar el siguiente pedido "></a></i>
-                  <i class="fab fa-facebook"><a href="https://www.facebook.com/Aurora-Materiales-1531611110225827/"></a></i>
+                  <a href="http://wa.me/541130847961?text=hola queria realizar el siguiente pedido "><i class="fab fa-whatsapp"></i></a>
+                  <a href="https://www.facebook.com/Aurora-Materiales-1531611110225827/">  <i class="fab fa-facebook"></i></a>
                   <i class="fab fa-instagram"></i>
-                  <i class="fab fa-youtube"><a href="https://www.youtube.com/"></a></i>
+                  <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
                 </p>
               </div>
               <div class="col-12 col-md-4">
