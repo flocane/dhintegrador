@@ -39,7 +39,7 @@ function validar($datos){
     }
     return $errores;
 }
-function imputUsuario ($campo){
+function inputUsuario ($campo){
     if (isset($_POST[$campo])) {
         return $_POST[$campo];
     }
