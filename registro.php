@@ -63,21 +63,14 @@ if ($_POST){
         <?php endforeach;
       echo "</ul>";
       endif;?>
-    <?php
-      if(isset($errores)):?>
-        <ul class="alert alert-danger">
-          <?php
-          foreach ($errores as $key => $value) :?>
-            <li> <?=$value;?> </li>
-            <?php endforeach;?>
-        </ul>
-      <?php endif;?>
 <div class="container">
     <div class="row">
         <div class="col-md-12">
             <div class="well well-sm">
                 <form class="form-horizontal" method="POST">
                     <fieldset>
+                    <br>
+                    <br>
                         <legend class="text-center header">Formulario de Registro de Usuarios</legend>
                         <div class="form-group"> <!-- Nombre -->
                         <label for="full_name_id" class="control-label">Nombre</label>

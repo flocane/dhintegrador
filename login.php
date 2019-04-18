@@ -17,49 +17,49 @@ include_once("controladores/loader.php");
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light ">
-  <a class="navbar-brand" href="#">Aurora Materiales</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <div class="container-fluid px-0">
+  <nav class="navbar navbar-expand-lg navbar-light ">
+<a class="navbar-brand" href="#">Aurora Materiales</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
   <ul class="navbar-nav">
-  <li class="nav-item active">
-    <a class="nav-link" href="index.php">Home </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Productos</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="formulario.php">Contacto</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="about.php" >Sobre Nosotros</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="registro.php" >Registrate</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="login.php" >Ingresa <span class="sr-only">(current)</span></a>
-  </li>
+    <li class="nav-item active">
+      <a class="nav-link" href="index.php">Home </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Productos</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="formulario.php">Contacto <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="about.php" >Sobre Nosotros</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="registro.php" >Registrate</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="login.php" >Ingresa</a>
+    </li>
   </ul>
-  </div>
-  </nav>
+</div>
+</nav>
 <section>
-  <div class="col-12 mt-5">
-  <h1>Login</h1>
-    </div>
   <form>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h1> LOGIN</h1>
     <div class="container">
-
-
   <div class="form-row">
     <div class="form-group col-12">
       <label for="inputEmail">Email</label>
       <input type="email" class="form-control" id="inputEmail" placeholder="Email">
     </div>
-
-  <div class="form-group col-12">
+<div class="form-group col-12">
     <label for="inputAddress2">Password</label>
     <input type="password" class="form-control" id="Password" placeholder="Password">
   </div>
@@ -73,10 +73,6 @@ include_once("controladores/loader.php");
         Remember me
       </label>
       </div>
-
-
-
-
   </div>
 </form>
 <br>
