@@ -1,5 +1,24 @@
 <?php
 include_once("controladores/loader.php");
+// dd($_POST);
+if($_POST){
+if(count($errores)===0){
+  $usuario = buscarEmail($_POST["email"]);
+  if($usuario ==null){
+    $errores["email"]="Usted no esta registrado";
+  }else {
+    if(password_verify($_POST["password"],$usuario["password"])===false){
+      $errores["password"]= "Datos incorrectos";
+    }
+  }
+  crearSesion($usuario,$_POST);
+
+  if (validarUsuario()){
+    header("location: index.php");
+  }else{
+    header("location: registro.php");
+  }
+}}
  ?>
 
 <!DOCTYPE html>
@@ -47,21 +66,21 @@ include_once("controladores/loader.php");
 </div>
 </nav>
 <section>
-  <form>
   <br>
   <br>
   <br>
   <br>
   <h1> LOGIN</h1>
     <div class="container">
+<form action="" method="POST">
   <div class="form-row">
     <div class="form-group col-12">
       <label for="inputEmail">Email</label>
-      <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+      <input name="email"type="email" class="form-control" id="inputEmail" placeholder="Email">
     </div>
 <div class="form-group col-12">
     <label for="inputAddress2">Password</label>
-    <input type="password" class="form-control" id="Password" placeholder="Password">
+    <input type="password" name="password" class="form-control" id="Password" placeholder="Password">
   </div>
 </div>
   <div class="form-group col-12">

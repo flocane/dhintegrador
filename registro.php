@@ -3,7 +3,8 @@ include_once("Controladores/loader.php");
 if ($_POST){
   $errores=validar($_POST);
   if (count($errores)===0) {
-    $registro= armarRegistro($_POST);
+    $avatar= setAvatar($_FILES);
+    $registro= armarRegistro($_POST,$avatar);
     guardar($registro);
     header("location:login.php");
     exit;
@@ -69,7 +70,7 @@ if ($_POST){
     <div class="row">
         <div class="col-md-12">
             <div class="well well-sm">
-                <form class="form-horizontal" method="POST">
+                <form class="form-horizontal" method="POST" enctype= "multipart/form-data">
                     <fieldset>
                     <br>
                         <legend class="text-center header">Formulario de Registro de Usuarios</legend>
@@ -98,6 +99,10 @@ if ($_POST){
                             <input type="password" class="form-control" id="repassword" name="repassword" placeholder="Ingresar Confirmacion de Contraseña del usuario">
                         </div>
                         </div>
+                        <div class="form-group">
+                            <input  type="file" name="avatar" value=""/>
+                        </div>
+
                         <div class="form-group"> <!-- Boton de Enviar Registro-->
                           <div class="col-md-12 text-center">
                            <button type="submit" class="btn btn-primary btn-lg">Registrame</button>

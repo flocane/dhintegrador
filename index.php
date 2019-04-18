@@ -34,12 +34,18 @@ include_once("controladores/loader.php");
     <li class="nav-item">
       <a class="nav-link" href="about.php" >Sobre Nosotros</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="registro.php" >Registrate</a>
+    <?php if (isset($_SESSION["nombre"])) {?>
+      <li class='nav-item'>
+        Bienvenide <?=$_SESSION["nombre"];}?>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="login.php" >Ingresa</a>
-    </li>
+      <li class="nav-item">
+        <a class="nav-link" href="registro.php" >Registrate</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="login.php" >Ingresa</a>
+      </li>
+
+
   </ul>
 </div>
 </nav>
