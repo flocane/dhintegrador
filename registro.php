@@ -1,5 +1,5 @@
 <?php
-include_once("controladores/loader.php");
+include_once("Controladores/loader.php");
 if ($_POST){
   $errores=validar($_POST);
   if (count($errores)===0) {
@@ -56,6 +56,8 @@ if ($_POST){
 <br>
 <br>
 <br>
+<br>
+<br>
 <?php if(isset($errores)):
       echo "<ul class='alert alert-danger text-center'>";
       foreach ($errores as $key => $value) :?>
@@ -70,11 +72,10 @@ if ($_POST){
                 <form class="form-horizontal" method="POST">
                     <fieldset>
                     <br>
-                    <br>
                         <legend class="text-center header">Formulario de Registro de Usuarios</legend>
                         <div class="form-group"> <!-- Nombre -->
                         <label for="full_name_id" class="control-label">Nombre</label>
-                        <input type="text" class="form-control" id="Nombre" name="nombre" value="<?=(isset($errores["nombre"]) )? "" : inputUsuario("nombre");?>"placeholder="Ingresar Nombre">
+                        <input type="text" class="form-control" id="Nombre" name="nombre" value="<?=(isset($errores["nombre"]) )? "" : inputUsuario("nombre");?>"  placeholder="Ingresar Nombre">
                         </div>
                         <div class="form-group"> <!-- Apellido -->
                         <label for="apellido" class="control-label">Apellido</label>
