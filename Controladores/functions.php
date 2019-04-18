@@ -1,5 +1,5 @@
 <?php
-
+ session_start();
 function validar($datos){
     $errores=[];
     $nombre = trim($datos["nombre"]);
@@ -13,18 +13,18 @@ function validar($datos){
     }
     $domicilio = $datos["domicilio"];
     if (empty($domicilio)) {
-        $errores["apellido"]="Por favor completar campo Domicilio no puede estar en blanco";
+        $errores["domicilio"]="Por favor completar campo Domicilio no puede estar en blanco";
     }
     $telefono = $datos["Telefono"];
     if (empty($telefono)) {
-        $errores["apellido"]="Por favor completar campo Domicilio no puede estar en blanco";
+        $errores["telefono"]="Por favor completar campo Telefono no puede estar en blanco";
     }
     $email= trim($datos["email"]);
 
     if (!filter_var($email,FILTER_VALIDATE_EMAIL)||$email === "" ) {
-        $errores["email"]="Debe completar Email o e-mail invalido ";
+        $errores["email"]="E-mail Invalido ";
     }
-    
+
     $password= trim($datos["password"]);
     $repassword= trim($datos["repassword"]);
 
@@ -35,7 +35,7 @@ function validar($datos){
     }elseif ($repassword ==="") {
         $errores["repassword"]="Tiene que confirmar la contraseña";
     }elseif ($password!=$repassword) {
-        $errores["repassword"]="Las contraseñas deben ser iguales";
+        $errores["repassword"]="Las contraseñas no coinciden";
     }
     return $errores;
 }

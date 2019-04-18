@@ -1,5 +1,5 @@
 <?php
-include_once("funciones.php");
+include_once("controladores/loader.php");
 
 if ($_POST) {
   $errores =validar($_POST);
@@ -63,7 +63,7 @@ if ($_POST) {
     <div class="row">
         <div class="col-md-12 mt-5">
             <div class="well well-sm mt-5">
-                <form class="form-horizontal" method="post">
+                <form class="form-horizontal" action="" method="POST">
                     <fieldset>
                         <legend class="text-center header">Formulario de Contacto</legend>
                         <div class="form-group"> <!-- Nombre -->

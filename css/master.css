@@ -184,3 +184,6 @@ transition: color 0.4s ease;
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
 }
+h5{
+  color: white;
+}

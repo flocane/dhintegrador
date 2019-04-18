@@ -1,5 +1,5 @@
 <?php
-include_once("funciones.php");
+include_once("controladores/loader.php");
 if ($_POST){
   $errores=validar($_POST);
   if (count($errores)===0) {
@@ -76,24 +76,24 @@ if ($_POST){
     <div class="row">
         <div class="col-md-12">
             <div class="well well-sm">
-                <form class="form-horizontal" method="post">
+                <form class="form-horizontal" method="POST">
                     <fieldset>
                         <legend class="text-center header">Formulario de Registro de Usuarios</legend>
                         <div class="form-group"> <!-- Nombre -->
                         <label for="full_name_id" class="control-label">Nombre</label>
-                        <input type="text" class="form-control" id="Nombre" name="nombre" placeholder="Ingresar Nombre">
+                        <input type="text" class="form-control" id="Nombre" name="nombre" value="<?=(isset($errores["nombre"]) )? "" : inputUsuario("nombre");?>"placeholder="Ingresar Nombre">
                         </div>
                         <div class="form-group"> <!-- Apellido -->
                         <label for="apellido" class="control-label">Apellido</label>
-                        <input type="text" class="form-control" id="Apellido" name="apellido" placeholder="Ingresar Apellido">
+                        <input type="text" class="form-control" id="Apellido" name="apellido" value="<?=(isset($errores["apellido"]) )? "" : inputUsuario("apellido");?>" placeholder="Ingresar Apellido">
                         </div>
                         <div class="form-group"> <!-- Usuario -->
                             <label for="usuario" class="control-label">Usuario</label>
-                            <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Ingresar Nombre de Usuario">
+                            <input type="text" class="form-control" id="usuario" name="usuario" value="<?=(isset($errores["usuario"]) )? "" : inputUsuario("usuario");?>" placeholder="Ingresar Nombre de Usuario">
                         </div>
                         <div class="form-group"> <!-- E-mail -->
                             <label for="email" class="control-label">E-mail</label>
-                            <input type="text" class="form-control" id="email" name="email" placeholder="Ingresar numero e-mail de Conctato">
+                            <input type="text" class="form-control" id="email" name="email" value="<?=(isset($errores["email"]) )? "" : inputUsuario("email");?>" placeholder="Ingresar numero e-mail de Conctato">
                         </div>
                         <div class="form-group"> <!-- Password -->
                             <label for="password" class="control-label">Contraseña</label>
