@@ -66,6 +66,8 @@ if ($_POST){
                         </div>
                         </div>
                         <div class="form-group">
+                            <label for="fotoperfil class="control-label" >Foto de Perfil</label>
+                            <br>
                             <input  type="file" name="avatar" value=""/>
                         </div>
 
