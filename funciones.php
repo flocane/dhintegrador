@@ -1,4 +1,6 @@
 <?php
+session_start();
+require 'helpers.php';
 
 function validar($datos){
     $errores=[];
@@ -55,4 +57,51 @@ function armarRegistro($datos){
 function guardar($usuario){
     $jusuario =json_encode($usuario);
     file_put_contents("usuarios.json",$jusuario.PHP_EOL, FILE_APPEND);
+}
+
+// LOGIN
+
+function login($usuario)
+{
+    $_SESSION['email'] = $usuario['email'];
+    setcookie('email', $usuario['email'], time() + 3600 * 24 * 7, "/");
+}
+
+// LOGOUT
+
+function logout()
+{
+    if(!isset($_SESSION)) {
+        session_start();
+    }
+    session_destroy();
+    setcookie('email', null, time() -1);
+    redirect('registro.php');
+}
+// CONEXION CON BASE DE DATOS
+
+function dbConectar()
+{
+    $db = file_get_contents('usuarios.json');
+    $arr = explode(PHP_EOL, $db);
+    array_pop($arr);
+
+    foreach($arr as $user) {
+        $usuariosArray[] = json_decode($user, true);
+    }
+
+    return $usuariosArray;
+
+}
+// BUSCAR EN BASE DE DATOS POR EMAIL
+
+function BuscarEmail($email)
+{
+    $usuario = dbConectar();
+    foreach($usuarios as $usuario) {
+        if($usuario['email'] === $email) {
+            return $usuario;
+        }
+    }
+    return null;
 }

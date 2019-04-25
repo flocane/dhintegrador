@@ -1,9 +1,23 @@
 <?php
 include_once("controladores/loader.php");
+// PRUEBA DE MAURO
+
+// if($_POST) {
+//   $usuario = $usersDb->BuscarEmail($_POST['email']);
+//   if($usuario !== null) {
+//       if(password_verify($_POST['password'], $usuario['password']) == true) {
+//           $email = $_POST['email'];
+//           redirect('Ingreso.php');
+//       } 
+//   }
+  
+// }
+
+
 // dd($_POST);
 if($_POST){
 if(count($errores)===0){
-  $usuario = buscarEmail($_POST["email"]);
+  $usuario = BuscarEmail($_POST["email"]);
   if($usuario ==null){
     $errores["email"]="Usted no esta registrado";
   }else {
