@@ -52,14 +52,34 @@ function armarRegistro($datos){
         "email"=>$datos["email"],
         "password"=>password_hash($datos["password"],PASSWORD_DEFAULT)
     ];
+// AGREGO MAURO
+    $usuario['id'] = idGenerado();
+
    return $usuario;
 }
+// AGREGO MAURO
+
+function idGenerado(){
+    $archivo = file_get_contents("users.json");
+
+    if($archivo == "") {
+        return 1;
+    }
+
+    $usuarios = explode(PHP_EOL, $archivo);
+    array_pop($usuarios);
+
+    $UltimoUsuario = $usuarios[count($usuarios) - 1];
+    $UltimoUsuario = json_decode($UltimoUsuario, true);
+
+    return $UltimoUsuario['id'] + 1;
 function guardar($usuario){
     $jusuario =json_encode($usuario);
     file_put_contents("usuarios.json",$jusuario.PHP_EOL, FILE_APPEND);
+    }
 }
 
-// LOGIN
+// LOGIN AGREGO MAURO
 
 function login($usuario)
 {
@@ -67,7 +87,7 @@ function login($usuario)
     setcookie('email', $usuario['email'], time() + 3600 * 24 * 7, "/");
 }
 
-// LOGOUT
+// LOGOUT AGREGO MAURO
 
 function logout()
 {
@@ -78,7 +98,7 @@ function logout()
     setcookie('email', null, time() -1);
     redirect('registro.php');
 }
-// CONEXION CON BASE DE DATOS
+// CONEXION CON BASE DE DATOS AGREGO MAURO
 
 function dbConectar()
 {
@@ -93,7 +113,7 @@ function dbConectar()
     return $usuariosArray;
 
 }
-// BUSCAR EN BASE DE DATOS POR EMAIL
+// BUSCAR EN BASE DE DATOS POR EMAIL AGREGO MAURO
 
 function BuscarEmail($email)
 {
