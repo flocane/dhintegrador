@@ -16,6 +16,7 @@ include_once("controladores/loader.php");
 
 // dd($_POST);
 if($_POST){
+  $errores=validar($_POST);
 if(count($errores)===0){
   $usuario = BuscarEmail($_POST["email"]);
   if($usuario ==null){
@@ -26,7 +27,6 @@ if(count($errores)===0){
     }
   }
   crearSesion($usuario,$_POST);
-
   if (validarUsuario()){
     header("location: index.php");
   }else{
@@ -38,11 +38,11 @@ if(count($errores)===0){
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-      <?php include_once('head.php'); ?>
+      <?php include_once('components/head.php'); ?>
   </head>
   <body>
   <div class="container-fluid px-0">
-  <?php include_once('navbar.php'); ?>
+  <?php include_once('components/navbar.php'); ?>
 <section>
   <br>
   <br>
@@ -74,6 +74,6 @@ if(count($errores)===0){
 </form>
 <br>
 </section>
-<?php include_once('footer.php'); ?>
+<?php include_once('components/footer.php'); ?>
   </body>
 </html>

@@ -5,11 +5,11 @@ include_once("controladores/loader.php");
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-        <?php include_once('head.php'); ?>
+        <?php include_once('components/head.php'); ?>
   </head>
   <body>
     <div class="container-fluid px-0">
-          <?php include_once('navbar.php'); ?>
+          <?php include_once('components/navbar.php'); ?>
       <div class="section1 row mx-0">
         <h2 class="first-title"> Tu futuro proyecto comienza aqui</h2> <br>
         <button type="button" class="btn btn-primary cotizar" name="button">Cotizar ahora</button>
@@ -230,7 +230,7 @@ include_once("controladores/loader.php");
           </section>
         </div>
       </div>
-            <?php include_once('footer.php'); ?>
+            <?php include_once('components/footer.php'); ?>
       </div>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

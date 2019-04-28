@@ -9,7 +9,7 @@ if ($_POST) {
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-        <?php include_once('head.php'); ?>
+        <?php include_once('components/head.php'); ?>
 </head>
 <body>
   <!-- <div class="container"> -->
@@ -22,7 +22,7 @@ if ($_POST) {
         }
       ?>
 <div class="container-fluid px-0">
-  <?php include_once('navbar.php'); ?>
+  <?php include_once('components/navbar.php'); ?>
 <br>
 <br>
 <br>
@@ -74,4 +74,4 @@ if ($_POST) {
         </div>
     </div>
 </div>
-<?php include_once('footer.php'); ?>
+<?php include_once('components/footer.php'); ?>

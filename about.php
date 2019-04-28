@@ -4,10 +4,10 @@ include_once("controladores/loader.php");
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<?php include_once('head.php'); ?>
+<?php include_once('components/head.php'); ?>
   <body>
     <div class="container-fluid px-0">
-      <?php include_once('navbar.php'); ?>
+      <?php include_once('components/navbar.php'); ?>
           <div class="headerabout row mt-5">
             <div class="col-12 mt-5 d-flex">
               <h2>Sobre Nosotros</h2>
@@ -25,7 +25,7 @@ include_once("controladores/loader.php");
     </ul>
   </div>
 </div>
-<?php include_once('footer.php'); ?>
+<?php include_once('components/footer.php'); ?>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

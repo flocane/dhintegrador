@@ -2,8 +2,9 @@
  session_start();
 function validar($datos){
     $errores=[];
-    $nombre = trim($datos["nombre"]);
+    
 if (isset($datos["nombre"])) {
+    $nombre = trim($datos["nombre"]);
   if (empty($nombre)) {
       $errores["nombre"]="Por favor completar campo Nombre no puede estar en blanco";
   }
@@ -37,16 +38,18 @@ if (isset($datos["nombre"])) {
  }
 if (isset($datos["password"])) {
   $password= trim($datos["password"]);
-  $repassword= trim($datos["repassword"]);
 
   if (empty($password)) {
       $errores["password"] = " No puede dejar en blanco la contraseña";
   }elseif(strlen($password<6)){
       $errores["password"]= "La contraseña debe tener como minimo 6 caracteres";
-  }elseif ($repassword ==="") {
-      $errores["repassword"]="Tiene que confirmar la contraseña";
-  }elseif ($password!=$repassword) {
-      $errores["repassword"]="Las contraseñas no coinciden";
+  }
+  if (isset($datos["repassword"])) {
+    if ($repassword ==="") {
+        $errores["repassword"]="Tiene que confirmar la contraseña";
+    }elseif ($password!=$repassword) {
+        $errores["repassword"]="Las contraseñas no coinciden";
+    }
   }
 }
 
@@ -97,7 +100,8 @@ function buscarEmail($email){
 
 
 function abrirBaseDatos(){
-    $datosjson = file_get_contents("../usuarios.json");
+    $baseDatosUsuarios=[];
+    $datosjson = file_get_contents("usuarios.json");
     $datosjson = explode(PHP_EOL,$datosjson);
     array_pop($datosjson);
     foreach ($datosjson as  $usuario) {
