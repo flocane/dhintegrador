@@ -8,9 +8,9 @@ include_once("controladores/loader.php");
 //       if(password_verify($_POST['password'], $usuario['password']) == true) {
 //           $email = $_POST['email'];
 //           redirect('Ingreso.php');
-//       } 
+//       }
 //   }
-  
+
 // }
 
 
