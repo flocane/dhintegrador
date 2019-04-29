@@ -23,7 +23,7 @@ if (isset($datos["nombre"])) {
    }
  }
    if (isset($datos["telefono"])) {
-   $telefono = $datos["Telefono"];
+   $telefono = $datos["telefono"];
    if (empty($telefono)) {
        $errores["telefono"]="Por favor completar campo Telefono no puede estar en blanco";
    }

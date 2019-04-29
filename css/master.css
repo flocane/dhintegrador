@@ -46,6 +46,24 @@ transition: color 0.4s ease;
   z-index: 20;
   height: 6vw;
 }
+/* agrego estilo */
+.nav-item{
+  color: white;
+  padding: .5rem;
+}
+.navbar-light .navbar-brand{
+  color: white;
+}
+.navbar-light .navbar-nav .nav-link{
+  color: white;
+}
+h1{
+  font-size: 1.5em;
+  text-align: center;
+  hyphens: auto;
+  margin: 15px;
+}
+/* hasta aca */
 .section1{
   background-image:url(../img/cascos.jpg);
   background-position: center;
@@ -53,7 +71,7 @@ transition: color 0.4s ease;
   background-repeat: no-repeat;
   padding: 20em;
   display: flex;
-  margin: 0;
+  margin: 0 auto;
   justify-content: center;
 }
 .first-title{
@@ -126,6 +144,7 @@ transition: color 0.4s ease;
   background-color: #bbb;
   color: black;
   overflow: hidden;
+  border-radius: 25px;
 }
 
 /* Style the back side */
@@ -133,6 +152,8 @@ transition: color 0.4s ease;
   background-color: #2E3192;
   color: white;
   transform: rotateY(180deg);
+  border-radius: 25px;
+
 }
 
 .mx-auto {
@@ -169,7 +190,7 @@ transition: color 0.4s ease;
   background-color: none;
 }
 .sobre{
-  background-image:url(../img/cal.png);
+  background-image:url(../img/presupuesto.jpeg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -177,13 +198,28 @@ transition: color 0.4s ease;
 .lista{
   color: orange;
   font-weight: bold;
-  font-size: 2em;
+  font-size: 1.5em;
+
 }
 .descripcion{
+  border-radius: 10px;
   font-size: 1rem;
   color: white;
-  background-color: rgba(0, 0, 0, 0.5);
+  /* background-color: rgba(0, 0, 0, 0.5); */
 }
+.caja{
+  padding: 10px;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+
+}
+p{
+  padding: 10px;
+}
+
 h5{
   color: white;
+}
+h2{
+  margin: 0 auto;
 }

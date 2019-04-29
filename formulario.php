@@ -24,8 +24,6 @@ if ($_POST) {
 <div class="container-fluid px-0">
   <?php include_once('components/navbar.php'); ?>
 <br>
-<br>
-<br>
 <div class="container ">
     <div class="row">
         <div class="col-md-12 mt-5">

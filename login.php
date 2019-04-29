@@ -48,7 +48,7 @@ if(count($errores)===0){
   <br>
   <br>
   <br>
-  <h1> LOGIN</h1>
+  <h1> Login</h1>
     <div class="container">
 <form action="" method="POST">
   <div class="form-row">
