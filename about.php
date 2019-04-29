@@ -1,5 +1,6 @@
 <?php
 include_once("controladores/loader.php");
+
  ?>
 
 <!DOCTYPE html>
@@ -22,7 +23,7 @@ include_once("controladores/loader.php");
       <li class="lista">¿Donde estan Ubicados?</li>
       <p class="descripcion">Estamos Ubicados en la zona de versalles, Capital Federal. Realizamos entregas en toda la provicia de Buenos Aires</p>
       <li class="lista">¿Como es la metodologia de entrega?</li>
-      <p class="descripcion">Tomamos pedidos de 1 a 2 dias de anticipacion , la entrega se hace con camiones volcadores y el servicio de hidrogrua se contrata aparte por camion completo , <a href="#"> ver tabla</a> de costos para entregas </p>
+      <p class="descripcion">Tomamos pedidos con 1 a 2 dias de anticipacion , la entrega se hace con camiones volcadores y el servicio de hidrogrua se contrata aparte por camion completo , <a href="#"> ver tabla</a> de costos para entregas </p>
       <li class="lista">¿Que Metodos de Pago aceptan?</li>
       <p class="descripcion">En el local contamos con promociones con varias tarjetas de credito , a su vez aceptamos debito , efectivo , transferencias bancarias y cheques al dia </p>
     </ul>
