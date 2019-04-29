@@ -65,7 +65,7 @@ if ($_POST) {
                         </div>
                         <div class="form-group"> <!-- Boton de Enviar-->
                           <div class="col-md-12 text-center">
-                           <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+                           <button type="submit" class="btn btn-info">Enviar</button>
                           </div>
                         </div>
                     </fieldset>
