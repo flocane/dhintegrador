@@ -1,5 +1,5 @@
 <?php
-include_once("controladores/loader.php");
+include_once("Controladores/loader.php");
 // PRUEBA DE MAURO
 
 // if($_POST) {
