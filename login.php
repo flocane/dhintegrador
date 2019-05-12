@@ -63,7 +63,7 @@ if(count($errores)===0){
 </div>
   <div class="form-group col-12">
     <div class="form-check">
-      <button type="submit" class="btn btn-primary">Sign in</button>
+      <button type="submit" class="btn btn-info">Sign in</button>
       <div>
       <input class="form-check-input" type="checkbox" id="gridCheck">
       <label class="form-check-label" for="gridCheck">
