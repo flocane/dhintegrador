@@ -17,9 +17,9 @@
     <li class="nav-item">
       <a class="nav-link" href="about.php" >Sobre Nosotros</a>
     </li>
-    <?php if (isset($_SESSION["nombre"])) {?>
+    <?php if (isset($_SESSION["name"])) {?>
       <li class="nav-item">
-          Bienvenido/a: <?=$_SESSION["nombre"];?>
+          Bienvenido/a: <?=$_SESSION["name"];?>
       <a class="nav-item" href="logout.php"> Logout</a> <?php } ?>
       </li>
     <?php if (empty($_SESSION)){?>

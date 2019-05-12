@@ -16,22 +16,18 @@ include_once("Controladores/loader.php");
 
 // dd($_POST);
 if($_POST){
-  $errores=validar($_POST);
+  $errores=$validator->validateInput($_POST);
 if(count($errores)===0){
-  $usuario = BuscarEmail($_POST["email"]);
-  if($usuario ==null){
-    $errores["email"]="Usted no esta registrado";
-  }else {
-    if(password_verify($_POST["password"],$usuario["password"])===false){
-      $errores["password"]= "Datos incorrectos";
-    }
+  $usuario = new user (null, null , $_POST["email"], $_POST["password"]);
+  $user= $db->search($usuario->getEmail());
+  if ($user)
+  {
+      if($auth->validatePassword($usuario->getPassword(),$user["password"])){
+      Session::set($user);
+      header("location:index.php");
+      }
   }
-  crearSesion($usuario,$_POST);
-  if (validarUsuario()){
-    header("location: index.php");
-  }else{
-    header("location: registro.php");
-  }
+
 }}
  ?>
 

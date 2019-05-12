@@ -2,7 +2,7 @@
 include_once("Controladores/loader.php");
 
 if ($_POST) {
-  $errores =validar($_POST);
+  $errores =$validator->validateInput($_POST);
 }
 ?>
 <!DOCTYPE html>
