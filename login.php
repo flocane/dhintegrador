@@ -1,38 +1,29 @@
 <?php
-include_once("controladores/loader.php");
-// PRUEBA DE MAURO
-
-// if($_POST) {
-//   $usuario = $usersDb->BuscarEmail($_POST['email']);
-//   if($usuario !== null) {
-//       if(password_verify($_POST['password'], $usuario['password']) == true) {
-//           $email = $_POST['email'];
-//           redirect('Ingreso.php');
-//       }
-//   }
-
-// }
-
-
-// dd($_POST);
+include_once("Controladores/loader.php");
 if($_POST){
-  $errores=validar($_POST);
-if(count($errores)===0){
-  $usuario = BuscarEmail($_POST["email"]);
-  if($usuario ==null){
-    $errores["email"]="Usted no esta registrado";
-  }else {
-    if(password_verify($_POST["password"],$usuario["password"])===false){
-      $errores["password"]= "Datos incorrectos";
+  $user = new user (null, null , $_POST["email"], $_POST["password"]);
+  $errors=$validator->validate($user);
+if(count($errors)===0){
+  $userfind= $db->search($user->getEmail());
+  if ($userfind== null){
+    $errors['email']="Usuario no registrado";
+  }else{
+      if($auth->validatePassword($user->getPassword(),$userfind["password"])!=true){
+        $errors['password']="Por favor Verifique los Datos";
+      }else{
+        Auth:: setSession($userfind);
+        if (isset($_POST['recordar'])) {
+          Auth:: setCookie($userfind);
+        }
+        if (Auth::validateUser()) {
+          header("location:perfil.php");
+        }else{
+          header("location:registro.php");
+        }
+      }
     }
   }
-  crearSesion($usuario,$_POST);
-  if (validarUsuario()){
-    header("location: index.php");
-  }else{
-    header("location: registro.php");
-  }
-}}
+}
  ?>
 
 <!DOCTYPE html>
@@ -63,7 +54,7 @@ if(count($errores)===0){
 </div>
   <div class="form-group col-12">
     <div class="form-check">
-      <button type="submit" class="btn btn-info">Sign in</button>
+      <button type="submit" class="btn btn-primary">Sign in</button>
       <div>
       <input class="form-check-input" type="checkbox" id="gridCheck">
       <label class="form-check-label" for="gridCheck">

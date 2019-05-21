@@ -17,23 +17,6 @@
     <li class="nav-item">
       <a class="nav-link" href="about.php" >Sobre Nosotros</a>
     </li>
-    <?php if (isset($_SESSION["name"])) {?>
-      <li class="nav-item">
-          Bienvenido/a: <?=$_SESSION["name"];?>
-      <a class="nav-item" href="logout.php"> Logout</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="perfil.php" >Mi Perfil</a> <?php } ?>
-      </li>
-    <?php if (empty($_SESSION)){?>
-      <li class="nav-item">
-        <a class="nav-link" href="registro.php" >Registrate</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="login.php" >Ingresa</a>
-      </li>
-
-    <?php } ?>
   </ul>
 </div>
 </nav>
