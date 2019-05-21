@@ -32,8 +32,6 @@ class DBJSON extends Database
         $json = json_encode($prev);
 
         file_put_contents($this->file, $json);
-        $user = json_encode($userArray);
-        file_put_contents($this->file, $user . PHP_EOL, FILE_APPEND);
     }
 
     public function read()
@@ -45,15 +43,6 @@ class DBJSON extends Database
         $content = file_get_contents($this->file);
 
         return json_decode($content, true);
-        $results = array();
-        $explodes = explode(PHP_EOL, file_get_contents($this->file));
-        array_pop($explodes);
-
-        foreach($explodes as $explode) {
-            $results[] = json_decode($explode, true);
-        }
-
-        return $results;
     }
 
     public function update()

@@ -24,7 +24,6 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="perfil.php" >Mi Perfil</a> <?php } ?>
-      <a class="nav-item" href="logout.php"> Logout</a> <?php } ?>
       </li>
     <?php if (empty($_SESSION)){?>
       <li class="nav-item">

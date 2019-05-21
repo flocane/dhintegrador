@@ -1,7 +1,6 @@
 <?php
 include_once("Controladores/loader.php");
 if ($_POST){
-<<<<<<< HEAD
   $user = new User($_POST['nombre'], $_POST['apellido'], $_POST['email'], $_POST['password']);
 
   $errores=$validator->validateInput($_POST);
@@ -19,20 +18,6 @@ if ($_POST){
         }
       }
   }
-=======
-  $errores=$validator->validateInput($_POST);
-  if (count($errores)===0) {
-    $user = new User($_POST['nombre'], $_POST['apellido'], $_POST['email'], $_POST['password']);
-    if ($_FILES) {
-      $user->setAvatar($_FILES);
-    }
-    $userArray=$factory->create($user,$_FILES);
-    $db->save($userArray);
-    header("location:login.php");
-    exit;
-  }
-}
->>>>>>> 825c3c277ba976afa365858af24f46c97c2bd267
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
