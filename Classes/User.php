@@ -64,6 +64,7 @@ class User
     }
 
     public function setLastName($lastName)
+    public function setLastName()
     {
       $this->lastName = $lastName;
     }

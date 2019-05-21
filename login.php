@@ -1,29 +1,34 @@
 <?php
 include_once("Controladores/loader.php");
+// PRUEBA DE MAURO
+
+// if($_POST) {
+//   $usuario = $usersDb->BuscarEmail($_POST['email']);
+//   if($usuario !== null) {
+//       if(password_verify($_POST['password'], $usuario['password']) == true) {
+//           $email = $_POST['email'];
+//           redirect('Ingreso.php');
+//       }
+//   }
+
+// }
+
+
+// dd($_POST);
 if($_POST){
-  $user = new user (null, null , $_POST["email"], $_POST["password"]);
-  $errors=$validator->validate($user);
-if(count($errors)===0){
-  $userfind= $db->search($user->getEmail());
-  if ($userfind== null){
-    $errors['email']="Usuario no registrado";
-  }else{
-      if($auth->validatePassword($user->getPassword(),$userfind["password"])!=true){
-        $errors['password']="Por favor Verifique los Datos";
-      }else{
-        Auth:: setSession($userfind);
-        if (isset($_POST['recordar'])) {
-          Auth:: setCookie($userfind);
-        }
-        if (Auth::validateUser()) {
-          header("location:perfil.php");
-        }else{
-          header("location:registro.php");
-        }
+  $errores=$validator->validateInput($_POST);
+if(count($errores)===0){
+  $usuario = new user (null, null , $_POST["email"], $_POST["password"]);
+  $user= $db->search($usuario->getEmail());
+  if ($user)
+  {
+      if($auth->validatePassword($usuario->getPassword(),$user["password"])){
+      Session::set($user);
+      header("location:index.php");
       }
-    }
   }
-}
+
+}}
  ?>
 
 <!DOCTYPE html>

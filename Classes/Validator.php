@@ -11,6 +11,7 @@ class Validator
         } else if(!filter_var($user->getEmail(), FILTER_VALIDATE_EMAIL)) {
             $errors['email'] = "Crack el email no es valido";
         }
+
         if($user->getPassword() == "") {
             $errors['password'] = "Capo, me dejaste el password vacio";
         }else if(strlen($user->getPassword()) < 6) {
@@ -32,6 +33,20 @@ class Validator
         return $errors;
     }
 
+        if(isset($_FILES)) {
+            if(!$this->validateAvatar($_FILES)) {
+                $errors['image'] = "Imagen no valida";
+            }
+        }
+
+        return $errors;
+    }
+
+    private function validateAvatar($file)
+    {
+        return true;
+    }
+
     public function validateInput($data)
     {
       $errores=[];
@@ -48,6 +63,7 @@ class Validator
           $errores["apellido"]="Por favor completar campo Apellido no puede estar en blanco";
       }
     }
+
       if (isset($data["domicilio"])) {
      $domicilio = $data["domicilio"];
      if (empty($domicilio)) {
@@ -66,6 +82,7 @@ class Validator
      if (!filter_var($email,FILTER_VALIDATE_EMAIL)||$email === "" ) {
          $errores["email"]="E-mail Invalido ";
      }
+
    }
   if (isset($data["password"])) {
     $password= trim($data["password"]);
@@ -76,6 +93,9 @@ class Validator
         $errores["password"]= "La contraseña debe tener como minimo 6 caracteres";
     }
     }
+    }elseif(strlen($password<6)){
+        $errores["password"]= "La contraseña debe tener como minimo 6 caracteres";
+    }
     if (isset($data["repassword"])) {
        $repassword= trim ($data["repassword"]);
       if ($repassword ==="") {
@@ -85,5 +105,10 @@ class Validator
         }
       }
     return $errores;
+      }
+    }
+  }
+
+      return $errores;
     }
 }
