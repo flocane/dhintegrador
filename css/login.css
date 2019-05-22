@@ -1,0 +1,176 @@
+body {
+  background-image:url(../img/cascos.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.profile {
+  padding: 5px;
+  margin: 50px Auto;
+  width: 20%;
+  min-width: 300px;
+  max-width: 600px;
+  text-align: center;
+  background: #F4F2F4;
+  border-radius: 2px;
+}
+.profile:hover img {
+  transform: rotate(-3deg);
+}
+.profile:hover .bar span {
+  opacity: 1;
+}
+.profile img {
+  width: 100px;
+  border-radius: 90px;
+  margin-bottom: 28px;
+  box-shadow: 0 8px 6px -6px #555;
+  transition: transform 1s;
+}
+.profile .bar span {
+  width: 20%;
+  opacity: 0.5;
+  display: inline-block;
+  height: 5px;
+  padding: 0;
+  margin: 15px 0;
+  transition: opacity 1s;
+}
+.profile .bar span.one {
+  background-color: #5C96BC;
+}
+.profile .bar span.two {
+  background-color: #42E31B;
+}
+.profile .bar span.three {
+  background-color: #FEDE16;
+}
+.profile .bar span.four {
+  background-color: #E66504;
+}
+.profile .bar span.five {
+  background-color: #C60600;
+}
+.profile h1, .profile h2 {
+  color: #333;
+  text-rendering: optimizeLegibility;
+}
+.profile h1 {
+  font-family: "Sigmar One", Serif;
+  font-size: 24px;
+  line-height: 26px;
+}
+.profile h2 {
+  font-family: "Passion One", Serif;
+  font-size: 20px;
+  line-height: 22px;
+}
+
+.carrito {
+    width: 80%;
+    min-width: 500px;
+    max-width: 1500px;
+    text-align: center;
+    background: #F4F2F4;
+    border-radius: 2px;
+    display: inline-block;
+}
+.carrito:hover img {
+    transform: rotate(-3deg);
+  }
+  .carrito:hover .bar span {
+    opacity: 1;
+  }
+  .carrito img {
+    width: 60px;
+    border-radius: 90px;
+    margin-bottom: 28px;
+    box-shadow: 0 8px 6px -6px #555;
+    transition: transform 1s;
+  }
+  .carrito.bar span {
+    width: 20%;
+    opacity: 0.5;
+    display: inline-block;
+    height: 5px;
+    padding: 0;
+    margin: 15px 0;
+    transition: opacity 1s;
+  }
+  .carrito .bar span.one {
+    background-color: #5C96BC;
+  }
+  .carrito.bar span.two {
+    background-color: #42E31B;
+  }
+  .carrito.bar span.three {
+    background-color: #FEDE16;
+  }
+  .carrito.bar span.four {
+    background-color: #E66504;
+  }
+  .carrito.bar span.five {
+    background-color: #C60600;
+  }
+  .carrito h1, .profile h2 {
+    color: #333;
+    text-rendering: optimizeLegibility;
+  }
+  .carrito h1 {
+    font-family: "Sigmar One", Serif;
+    font-size: 24px;
+    line-height: 26px;
+  }
+  .carrito h2 {
+    font-family: "Passion One", Serif;
+    font-size: 20px;
+    line-height: 22px;
+  }
+  .table > tbody > tr > td,
+.table > tfoot > tr > td {
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 600px) {
+  table#cart tbody td .form-control {
+    width: 20%;
+    display: inline !important;
+  }
+  .actions .btn {
+    width: 36%;
+    margin: 1.5em 0;
+  }
+  .actions .btn-info {
+    float: left;
+  }
+  .actions .btn-danger {
+    float: right;
+  }
+  table#cart thead {
+    display: none;
+  }
+  table#cart tbody td {
+    display: block;
+    padding: 0.6rem;
+    min-width: 320px;
+  }
+  table#cart tbody tr td:first-child {
+    background: #333;
+    color: #fff;
+  }
+  table#cart tbody td:before {
+    content: attr(data-th);
+    font-weight: bold;
+    display: inline-block;
+    width: 8rem;
+  }
+  table#cart tfoot td {
+    display: block;
+  }
+  table#cart tfoot td .btn {
+    display: block;
+  }
+}
+
+  
