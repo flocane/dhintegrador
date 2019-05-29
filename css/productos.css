@@ -1,0 +1,101 @@
+* {
+    font-family: "Roboto";
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+  }
+  body {
+    background: #f9fafa;
+    background-image:url(../img/cascos.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .block {
+    margin: 20px;
+    margin-top: 110px;
+    border-radius: 4px;
+    width: 280px;
+    min-height: 430px;
+    background: #fff;
+    padding: 23px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 55px rgba(0,0,0,0.1);
+  }
+  .top {
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 10px;
+  }
+  .top ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  .top a {
+    color: #9e9e9e;
+  }
+  .top a:hover {
+    color: #c7ccdb;
+  }
+  .title_product {
+    padding: 2px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  .middle {
+    margin-bottom: 40px;
+  }
+  .middle img {
+    width: 100%;
+  }
+  .bottom {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+  .heading {
+    font-size: 17px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    letter-spacing: 0;
+  }
+  .info {
+    font-size: 14px;
+    color: #969696;
+    margin-bottom: 10px;
+  }
+  .style {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .old-price {
+    color: #f00;
+    text-decoration: line-through;
+  }
+  .bar span.one {
+    background-color: #5C96BC;
+  }
+  .bar span.two {
+    background-color: #42E31B;
+  }
+  .bar span.three {
+    background-color: #FEDE16;
+  }
+  .bar span.four {
+    background-color: #E66504;
+  }
+  .bar span.five {
+    background-color: #C60600;
+  }
+  
+  

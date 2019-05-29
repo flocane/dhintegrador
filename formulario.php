@@ -1,38 +1,38 @@
 <?php
-include_once("controladores/loader.php");
+include_once("Controladores/loader.php");
 
 if ($_POST) {
-  $errores =validar($_POST);
+  $errores =$validator->validateInput($_POST);
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-        <?php include_once('components/head.php'); ?>
+    <meta charset="utf-8">
+    <title>Formulario de Contacto Aurora</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/formulario.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Crete+Round|Josefin+Sans|Montserrat+Alternates" rel="stylesheet">
 </head>
-<body>
-  <!-- <div class="container"> -->
-  <ul>
-      <?php
-        if(isset($errores)){
-          foreach ($errores as $key => $value) :?>
-            <li class="alert alert-danger"><?=$value;?> </li>
-          <?php endforeach;
-        }
-      ?>
-<div class="container-fluid px-0">
+  <body>
   <?php include_once('components/navbar.php'); ?>
-<br>
-<br>
-<br>
-<div class="container ">
-    <div class="row">
-        <div class="col-md-12 mt-5">
-            <div class="well well-sm mt-5">
-                <form class="form-horizontal" action="" method="POST">
+<section>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="formulario col-6">
+            <img src="img/Logo_aurora.png" alt="Logo de Aurora Materiales
+            ">
+            <h1>&bull; FORMULARIO DE CONTACTO &bull;</h1>
+            <div class="bar">
+                <span class="one"></span><span class="two"></span><span class="three"></span><span class="four"></span><span class="five"></span>
+            </div>
+            <form class="form-horizontal" action="" method="POST">
                     <fieldset>
-                        <legend class="text-center header">Formulario de Contacto</legend>
                         <div class="form-group"> <!-- Nombre -->
                         <label for="full_name_id" class="control-label">Nombre</label>
                         <input type="text" class="form-control" id="Nombre" name="nombre" placeholder="Ingresar Nombre">
@@ -57,21 +57,25 @@ if ($_POST) {
                             <label for="ciudad" class="control-label">Ciudad</label>
                             <input type="text" class="form-control" id="ciudad" name="ciudad" placeholder="Ciudad o Localidad">
                         </div>
+                        <div class="bar">
+                        <span class="one"></span><span class="two"></span><span class="three"></span><span class="four"></span><span class="five"></span>
+                        </div>
                         <div class="form-group"><!-- Contacto-->
                             <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon">Contacto</i>
                             </span>
                         <div class="col-md-8"> <!-- Ingresar la Consulta-->
                             <textarea class="form-control" id="mensaje" name="mensaje" placeholder="Ingrese la consulta." rows="7"></textarea>
                         </div>
-                        <div class="form-group"> <!-- Boton de Enviar-->
-                          <div class="col-md-12 text-center">
-                           <button type="submit" class="btn btn-info">Enviar</button>
-                          </div>
+                        <div class="bar">
+                        <span class="one"></span><span class="two"></span><span class="three"></span><span class="four"></span><span class="five"></span>
                         </div>
                     </fieldset>
                 </form>
-            </div>
-        </div>
-    </div>
+            <button type="submit" class="btn btn-danger"> Contactarse </button>
+            </form>
+<br>
 </div>
+</section>
 <?php include_once('components/footer.php'); ?>
+  </body>
+</html>

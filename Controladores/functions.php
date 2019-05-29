@@ -1,8 +1,7 @@
 <?php
- session_start();
 function validar($datos){
     $errores=[];
-    
+
 if (isset($datos["nombre"])) {
     $nombre = trim($datos["nombre"]);
   if (empty($nombre)) {
@@ -23,7 +22,7 @@ if (isset($datos["nombre"])) {
    }
  }
    if (isset($datos["telefono"])) {
-   $telefono = $datos["Telefono"];
+   $telefono = $datos["telefono"];
    if (empty($telefono)) {
        $errores["telefono"]="Por favor completar campo Telefono no puede estar en blanco";
    }
@@ -45,6 +44,7 @@ if (isset($datos["password"])) {
       $errores["password"]= "La contraseña debe tener como minimo 6 caracteres";
   }
   if (isset($datos["repassword"])) {
+     $repassword= trim ($datos["repassword"]);
     if ($repassword ==="") {
         $errores["repassword"]="Tiene que confirmar la contraseña";
     }elseif ($password!=$repassword) {
