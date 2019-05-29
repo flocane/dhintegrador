@@ -9,6 +9,14 @@
     <link href="https://fonts.googleapis.com/css?family=Crete+Round|Josefin+Sans|Montserrat+Alternates" rel="stylesheet">
 </head>
 <div class="container">
+<<<<<<< HEAD
+=======
+<?php require "components/navbar_perfil.php"; ?>
+<br>
+<br>
+<br>
+<br>
+>>>>>>> Mauro
   <table id="cart" class="table table-hover table-condensed">
     <thead>
       <tr>

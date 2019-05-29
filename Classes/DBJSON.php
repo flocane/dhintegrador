@@ -18,10 +18,28 @@ class DBJSON extends Database
                 return $user;
             }
         }
+<<<<<<< HEAD
 
         return false;
 
     }
+=======
+        return false;
+    }
+    // public function open(){
+    //     if(file_exists($this->file)){
+    //         $database= file_get_contents($this->file);
+    //         $database = explode(PHP_EOL,$database);
+    //         array_pop($content);
+    //         foreach ($content as  $user) {
+    //             $userArray[]= json_decode($user,true);
+    //         }
+    //         return $userArray;
+    //     }else{
+    //         return null;
+    //     }    
+    // }
+>>>>>>> Mauro
 
     public function save($userArray)
     {
@@ -44,7 +62,24 @@ class DBJSON extends Database
 
         return json_decode($content, true);
     }
+<<<<<<< HEAD
 
+=======
+    // public function jsonRegistroOlvide($email,$password){
+    //     $user = $this->read();
+    //     foreach ($users as $key=>$user) {
+    //         if($email==$user["email"]){
+    //             $user["password"]= Encriptar::hashPassword($password);
+    //             $users[$key] = $user;    
+    //         }
+    //          $usuarios[$key] = $usuario;    
+    //     }
+    //     unlink($this->nombreArchivo);
+    //     foreach ($usuarios as  $usuario) {
+    //         $jsusuario = json_encode($usuario);
+    //         file_put_contents($this->nombreArchivo,$jsusuario. PHP_EOL,FILE_APPEND);
+    //     }
+>>>>>>> Mauro
     public function update()
     {
         //...

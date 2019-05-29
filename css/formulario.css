@@ -1,0 +1,79 @@
+@import url(https://fonts.googleapis.com/css?family=Sigmar+One);
+@import url(https://fonts.googleapis.com/css?family=Passion+One:400,700);
+body {
+  background: #242224;
+  background-image:url(../img/cascos.jpg);
+
+}
+
+.container {
+  border: solid 3px #474544;
+  max-width: 768px;
+  margin-top: 100px;
+  margin:30px Auto;
+}
+
+form {
+  padding: 17.5px;
+  margin-top:0px;
+  margin-left: 10px;
+  margin-left: 10px;
+}
+.formulario {
+  padding: 30px;
+  margin: 30px auto;
+  text-align: center;
+  background: #F4F2F4;
+  border-radius: 2px;
+}
+.formulario :hover img {
+  transform: rotate(-3deg);
+}
+.formulario :hover .bar span {
+  opacity: 1;
+}
+.formulario img {
+  width: 160px;
+  border-radius: 90px;
+  margin-bottom: 28px;
+  box-shadow: 0 8px 6px -6px #555;
+  transition: transform 1s;
+}
+.formulario .bar span {
+  width: 20%;
+  opacity: 0.5;
+  display: inline-block;
+  height: 5px;
+  padding: 0;
+  margin: 15px 0;
+  transition: opacity 1s;
+}
+.formulario .bar span.one {
+  background-color: #5C96BC;
+}
+.formulario .bar span.two {
+  background-color: #42E31B;
+}
+.formulario .bar span.three {
+  background-color: #FEDE16;
+}
+.formulario .bar span.four {
+  background-color: #E66504;
+}
+.formulario .bar span.five {
+  background-color: #C60600;
+}
+.formulario h1, .profile h2 {
+  color: #333;
+  text-rendering: optimizeLegibility;
+}
+.formulario h1 {
+  font-family: "Sigmar One", Serif;
+  font-size: 24px;
+  line-height: 26px;
+}
+.formulario h2 {
+  font-family: "Passion One", Serif;
+  font-size: 20px;
+  line-height: 22px;
+}

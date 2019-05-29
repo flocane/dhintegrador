@@ -9,7 +9,11 @@
       <a class="nav-link" href="index.php">Home</a>
     </li>
     <li class="nav-item">
+<<<<<<< HEAD
       <a class="nav-link" href="#">Productos</a>
+=======
+      <a class="nav-link" href="productos.php">Productos</a>
+>>>>>>> Mauro
     </li>
     <li class="nav-item">
       <a class="nav-link" href="formulario.php">Contacto</a>
