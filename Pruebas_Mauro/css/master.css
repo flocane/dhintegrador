@@ -1,0 +1,225 @@
+*{
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+}
+a{
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+}
+a:hover{
+  text-decoration: none;
+  color: inherit;
+}
+
+.iconos i:hover{
+  border-radius: 50%;
+  cursor: pointer;
+}
+.iconos i{
+  font-size: 25px;
+margin-left: 5px;
+transition: color 0.4s ease;
+}
+.iconos{
+  margin-left: 10px;
+}
+.iconos i.fa-whatsapp:hover{
+  color: green;
+}
+.iconos i.fa-facebook:hover{
+  color: #3b5998;
+}
+.iconos i.fa-instagram:hover{
+  color: #bc2a8d;
+}
+.iconos i.fa-youtube:hover{
+  color: red;
+}
+.navbar{
+  position: fixed;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 20;
+  height: 6vw;
+}
+/* agrego estilo */
+.nav-item{
+  color: white;
+  padding: .5rem;
+}
+.navbar-light .navbar-brand{
+  color: white;
+}
+.navbar-light .navbar-nav .nav-link{
+  color: white;
+}
+h1{
+  font-size: 1.5em;
+  text-align: center;
+  hyphens: auto;
+  margin: 15px;
+}
+/* hasta aca */
+.section1{
+  background-image:url(../img/cascos.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 20em;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+}
+.first-title{
+  text-transform: uppercase;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 3em;
+  font-family: 'Crete Round', serif;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+.cotizar{
+  justify-content: center;
+}
+.foot {
+    width: 100%;
+    bottom: 0;
+    z-index: 20;
+    color: white;
+}
+.section2{
+  background-image: url(../img/pantone.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  padding: 10rem;
+  justify-content: center;
+}
+.card{
+  justify-content: center;
+  border: 0px solid rgba(0,0,0,.125);
+  border-radius: 0rem;
+  padding-bottom: 1rem;
+}
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  /* border: 1px solid #f1f1f1; */
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #2E3192;
+  color: white;
+  transform: rotateY(180deg);
+  border-radius: 25px;
+
+}
+
+.mx-auto {
+  position: relative;
+  top: 1vw;
+}
+
+
+
+.titulo {
+  font-size: 2em;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: bold;
+}
+
+.section3 {
+  padding-top: 3vw;
+}
+@media (max-width:720px) {
+ .ocultar{
+   display: none;
+ }
+}
+
+.titulo-seccion {
+  font-size: 2em;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+}
+
+.card-titulo {
+  background-color: none;
+}
+.sobre{
+  background-image:url(../img/presupuesto.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.lista{
+  color: orange;
+  font-weight: bold;
+  font-size: 1.5em;
+
+}
+.descripcion{
+  border-radius: 10px;
+  font-size: 1rem;
+  color: white;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+}
+.caja{
+  padding: 10px;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+
+}
+p{
+  padding: 10px;
+}
+
+h5{
+  color: white;
+}
+h2{
+  margin: 0 auto;
+}
