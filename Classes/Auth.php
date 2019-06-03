@@ -36,11 +36,6 @@ class Auth
             return false;
         }
     }
-    // public function login($email)
-    // {
-    //     Session::set('email', $email);
-    //     Cookie::set('email', $email, 3600);
-    // }
     public function logout()
     {
         if(!$_SESSION) {

@@ -8,9 +8,9 @@ class User
     private $avatar = null;
     private $name;
     private $lastName;
-    private $rol;
+    private $rol=null;
 
-    public function __construct($name, $lastName, string $email, string $password, $rol)
+    public function __construct($name, $lastName, string $email, string $password, $rol=null)
     {
         $this->email = $email;
         $this->password = $password;

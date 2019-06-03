@@ -18,15 +18,29 @@ class Querys
         return $result;
     }
 
-    public static function get($pdo, $tabla, $id)
+    public static function getUser($pdo, $tabla, $idUser)
     {
-        $query = $pdo->prepare("SELECT * FROM $tabla WHERE id = $id");
+        $query = $pdo->prepare("SELECT $tabla.id, $tabla.name, $tabla.email, $tabla.avatar,$tabla.role from $tabla where $tabla.id = '$idUser'");
         $query->execute();
-        
-        $result = $query->fetch(PDO::FETCH_ASSOC);
-
-        return $result;
+        $userfind=$query->fetchAll(PDO::FETCH_ASSOC);
+        return $userfind;
     }
+
+    static public function deleteUser($pdo,$tabla,$idUser)
+    {
+        $query=$pdo->prepare("DELETE from $tabla where $tabla.id=:id");
+        $query->bindValue(':id',$idUser);
+        $query->execute();
+    }
+
+    static public function updateUser($pdo,$tabla,$idUser)
+    {
+        $query = $pdo->prepare("SELECT $tabla.id, $tabla.name, $tabla.email, $tabla.role from $tabla where $tabla.id = '$idUser'");
+        $query->execute();
+        $usermodify=$query->fetch(PDO::FETCH_ASSOC);
+        return $usermodify;
+    }
+
     public static function getEmail($pdo, $tabla, $email)
     {
         $query = $pdo->prepare("SELECT * FROM $tabla WHERE id = $email");
@@ -53,31 +67,4 @@ class Querys
 
         $stmt->execute();
     }
-    
-    public function updateUser($data)
-    {
-        $allowed = ["name","lastname","email","password","avatar"];
-        $params = [];
-
-        $setStr = "";
-
-        foreach ($allowed as $key) {
-            if (isset($data[$key]) && $key != "id") {
-                $setStr .= "`$key` = :$key,";
-                $params[$key] = $data[$key];
-            }
-        }
-
-        $setStr = rtrim($setStr, ",");
-
-        $params['id'] = $data['id'];
-
-        $this->db->prepare("UPDATE users SET $setStr WHERE id = :id")->execute($params);
-
-    }
-    static public function deleteUser($pdo,$tabla,$user){
-        $stmt= $pdo->prepare("DELETE FROM $tabla WHERE users=:");
-        $stmt->bindValue(':pelicula', $user);
-        $stmt->execute();
-    }    
 }

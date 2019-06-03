@@ -4,7 +4,7 @@ if($_POST){
   $user = new user (null, null , $_POST["email"], $_POST["password"]);
   $errors=$validator->validate($user);
 if(count($errors)===0){
-  $userfind= $db->search($user->getEmail());
+  $userfind = MYSQL::searchEmail($user->getEmail(),$pdo,'users');
   if ($userfind== null){
     $errors['email']="Usuario no registrado";
   }else{

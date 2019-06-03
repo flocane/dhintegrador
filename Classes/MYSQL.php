@@ -2,38 +2,42 @@
 
 class MYSQL extends Database
 {
-    private $file;
-
-    public function __construct($file)
+    static public function searchEmail($email,$pdo,$tabla)
     {
-        $this->file = $file;
+        $query = $pdo->prepare("SELECT * FROM $tabla WHERE email = :email");
+        $query->bindValue(':email',$email);
+        $query->execute();
+        $user = $query->fetch(PDO::FETCH_ASSOC);
+        return $user;
     }
 
-    static public function searchEmail($pdo,$tabla,$email)
+    static public function saveUser($pdo,$user,$tabla,$avatar)
     {
-        Querys::getEmail($pdo,$tabla,$email);
+        $query = $pdo->prepare("INSERT INTO $tabla (name,lastname,email,password,avatar,rol) VALUES (:name,:lastname,:email,:password,:avatar,:rol )");
+        $query->bindValue(':name',$user->getname());
+        $query->bindValue(':lastname',$user->getlastname());
+        $query->bindValue(':email',$user->getEmail());
+        $query->bindValue(':password',HashPassword::hash($user->getPassword()));
+        $query->bindValue(':avatar',$avatar);
+        $query->bindValue('rol',1);
+        $query->execute();
     }
+    public function read(){
 
-    public function saveMysql($user)
-    {
-        Querys::inserUser($user);
-    }
-
-    public function readMysql($tabla, $pdo)
-    {
-        Querys::index($tabla, $pdo);
     }
     
-    public function updateMysql($data)
-    {
-        Querys::updateUser($data);
+    public function update(){
+
     }
 
-    public function deleteMysql($pdo,$tabla,$user)
-    {
-        Querys::deleteUser($pdo,$tabla,$user);
+    public function delete(){
+
     }
 
+    public function save($user)
+    {
+    
+    }
     public function getFile()
     {
         return $this->file;
