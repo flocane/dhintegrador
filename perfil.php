@@ -14,6 +14,7 @@ $username = $_SESSION['logged'];
         <br>
         <br>
         <br>
+        <div class=container col 12>
         <div class="profile col-4">
             <img src="imagenes/<?=$_SESSION["avatar"];?>" alt="Avatar">
             <h1>Bienvenido/a:
@@ -27,7 +28,7 @@ $username = $_SESSION['logged'];
             </div>
                 <h2> <?=$_SESSION["email"];?> </h2>
             </div>
-        <div class='carrito col-8'>
+        <div class='carrito col-10'>
         <form action="" method="POST">
             <img src="img/Logo_aurora.png" alt="Logo de Aurora Materiales
             ">
@@ -39,7 +40,7 @@ $username = $_SESSION['logged'];
                 <label for="password">Password</label>
                     <input name="password"type="email" class="form-control" id="inputEmail" placeholder="Email">
             </div>
-            <div class="form-group col-12">
+            <div class="form-group>
                 <label for="repassword">Confirmar Password</label>
                     <input type="repassword" name="password" class="form-control" id="Password" placeholder="Password">
             </div>
@@ -55,6 +56,39 @@ $username = $_SESSION['logged'];
             </h1>
             </form>
         </div>
+    </div>
+        <div class=container2 col 12>
+        <div class='carrito col-6'>
+        <form action="" method="POST">
+            <img src="img/Logo_aurora.png" alt="Logo de Aurora Materiales
+            ">
+            <h1>Listado de Usuarios en Base de Datos
+            <div class="bar">
+                <span class="one"></span><span class="two"></span><span class="three"></span><span class="four"></span><span class="five"></span>
+            </div>
+            </form>
+        </div>
+        <div class='carrito col-6'>
+        <form action="" method="POST">
+            <img src="img/Logo_aurora.png" alt="Logo de Aurora Materiales
+            ">
+            <h1>Listado de Pedidos Confirmados
+            <div class="bar">
+                <span class="one"></span><span class="two"></span><span class="three"></span><span class="four"></span><span class="five"></span>
+            </div>
+            </form>
+        </div>
+        <div class='carrito col-6'>
+        <form action="" method="POST">
+            <img src="img/Logo_aurora.png" alt="Logo de Aurora Materiales
+            ">
+            <h1>Listado de Productos
+            <div class="bar">
+                <span class="one"></span><span class="two"></span><span class="three"></span><span class="four"></span><span class="five"></span>
+            </div>
+            </form>
+        </div>
+</div>
         <div>
         <?php include_once('components/footer.php'); ?>
         </div>
