@@ -3,7 +3,7 @@
             <div class=" col-12 col-md-4">
               <h3>Aurora Materiales </h3>
                 <ul>
-                  <li><a href="#">Contacto</a> </li>
+                  <li><a href="formulario.php">Contacto</a> </li>
                   <li><a href="#">Institucional</a> </li>
                   <li><a href="#">Sobre Nosotros</a> </li>
                 </ul>

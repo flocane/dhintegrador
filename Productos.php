@@ -26,17 +26,14 @@
   <div class="middle">
     <img src="img/cemento.jpg" alt="pic" />
   </div>
-
   <div class="bottom">
     <div class="heading">Cemento Loma Negra</div>
     <div class="info">Lorem ipsum dolor sit amet.</div>
     <div class="style">Bolsa: 5 Kilos / Color: XXXX</div>
     <div class="price">$500.00 <span class="old-price">$750.00</span></div>
   </div>
-
 </div>
 <div class="block">
-
   <div class="top">
     <ul>
       <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
@@ -45,21 +42,17 @@
 </a></li>
     </ul>
   </div>
-
   <div class="middle">
     <img src="img/cemento.jpg" alt="pic" />
   </div>
-
   <div class="bottom">
     <div class="heading">Cal </div>
     <div class="info">Lorem ipsum dolor sit amet.</div>
     <div class="style">Bolsa: 5 Kilos / Color: Blanco</div>
     <div class="price">$350.00 <span class="old-price">$450.00</span></div>
   </div>
-
 </div>
 <div class="block">
-
   <div class="top">
     <ul>
       <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
@@ -68,21 +61,17 @@
 </a></li>
     </ul>
   </div>
-
   <div class="middle">
     <img src="img/ladrillos.jpg" alt="pic" />
   </div>
-
   <div class="bottom">
     <div class="heading">Ladrillo Comun</div>
     <div class="info">Lorem ipsum dolor sit amet.</div>
     <div class="style">Tipo: Hueco </div>
     <div class="price">$50.00</div>
   </div>
-
 </div>
 <div class="block">
-
   <div class="top">
     <ul>
       <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
@@ -91,16 +80,14 @@
 </a></li>
     </ul>
   </div>
-
   <div class="middle">
     <img src="img/piedra_partida.jpg" alt="pic" />
   </div>
-
   <div class="bottom">
     <div class="heading">Piedra Partida por Mt3</div>
     <div class="info">Lorem ipsum dolor sit amet.</div>
     <div class="style">Bolsa: 10 K / Tipo: XXXXX</div>
     <div class="price">$200.00 <span class="old-price">$285.00</span></div>
   </div>
-
 </div>
+<?php include_once('components/footer.php'); ?>

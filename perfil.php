@@ -10,11 +10,7 @@ $username = $_SESSION['logged'];
 <html>
     <?php require "components/head_perfil.php";?>
     <body>
-<<<<<<< HEAD
-    <?php require "components/navbar_perfil.php"; ?>
-=======
-    c
->>>>>>> Mauro
+    <?php include_once('components/navbar.php'); ?>
         <br>
         <br>
         <br>
@@ -32,9 +28,6 @@ $username = $_SESSION['logged'];
                 <h2> <?=$_SESSION["email"];?> </h2>
             </div>
         <div class='carrito col-8'>
-<<<<<<< HEAD
-            <?php require "carrito.php"; ?>
-=======
         <form action="" method="POST">
             <img src="img/Logo_aurora.png" alt="Logo de Aurora Materiales
             ">
@@ -61,7 +54,6 @@ $username = $_SESSION['logged'];
             <button type="submit" class="btn btn-danger"> Actualizar </button>
             </h1>
             </form>
->>>>>>> Mauro
         </div>
         <div>
         <?php include_once('components/footer.php'); ?>

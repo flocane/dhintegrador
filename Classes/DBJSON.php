@@ -18,12 +18,6 @@ class DBJSON extends Database
                 return $user;
             }
         }
-<<<<<<< HEAD
-
-        return false;
-
-    }
-=======
         return false;
     }
     // public function open(){
@@ -39,7 +33,6 @@ class DBJSON extends Database
     //         return null;
     //     }    
     // }
->>>>>>> Mauro
 
     public function save($userArray)
     {
@@ -62,9 +55,6 @@ class DBJSON extends Database
 
         return json_decode($content, true);
     }
-<<<<<<< HEAD
-
-=======
     // public function jsonRegistroOlvide($email,$password){
     //     $user = $this->read();
     //     foreach ($users as $key=>$user) {
@@ -79,7 +69,6 @@ class DBJSON extends Database
     //         $jsusuario = json_encode($usuario);
     //         file_put_contents($this->nombreArchivo,$jsusuario. PHP_EOL,FILE_APPEND);
     //     }
->>>>>>> Mauro
     public function update()
     {
         //...

@@ -26,13 +26,13 @@ class QueryUsers
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    public function insertUser(User $user)
+    public function insertUser(User $users)
     {
-        $name = $user->getName();
-        $lastname = $user->getLastname();
-        $email = $user->getEmail();
-        $password= $user->getPassword();
-        $avatar = $user->getAvatar();
+        $name = $users->getName();
+        $lastname = $users->getLastname();
+        $email = $users->getEmail();
+        $password= $users->getPassword();
+        $avatar = $users->getAvatar();
 
         $stmt = $this->pdo->prepare("INSERT INTO users (name, lastname, email, password, avatar) VALUES (:name, :lastname, :email, :password, :avatar)");
 
