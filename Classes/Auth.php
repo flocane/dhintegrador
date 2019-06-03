@@ -47,6 +47,11 @@ class Auth
 
         }
     }
+    public static function checkRole($user){
+        if($user->getRole() == 1) {
+            redirect("login.php");
+        }  
+    }
     public function check()
     {
         return isset($_SESSION['logged']);

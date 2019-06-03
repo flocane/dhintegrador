@@ -1,6 +1,6 @@
 <?php
 
-class QueryUsers
+class Querys
 {
     private $pdo;
 
@@ -8,31 +8,40 @@ class QueryUsers
     {
         $this->pdo = $pdo;
     }
-
-    public function indexUser($table)
+    public static function index($tabla, $pdo)
     {
-        $stmt = $this->db->prepare("SELECT * FROM {$table}");
-        $stmt->execute();
+        $query = $pdo->prepare("SELECT * FROM $tabla");
+        $query->execute();
 
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $result = $query->fetchAll(PDO::FETCH_ASSOC);
 
+        return $result;
     }
 
-    public function getUser($id)
+    public static function get($pdo, $tabla, $id)
     {
-        $stmt = $this->db->prepare("SELECT * FROM users WHERE id = {$id}");
-        $stmt->execute();
+        $query = $pdo->prepare("SELECT * FROM $tabla WHERE id = $id");
+        $query->execute();
+        
+        $result = $query->fetch(PDO::FETCH_ASSOC);
 
-        return $stmt->fetch(PDO::FETCH_ASSOC);
+        return $result;
     }
-
-    public function insertUser(User $users)
+    public static function getEmail($pdo, $tabla, $email)
     {
-        $name = $users->getName();
-        $lastname = $users->getLastname();
-        $email = $users->getEmail();
-        $password= $users->getPassword();
-        $avatar = $users->getAvatar();
+        $query = $pdo->prepare("SELECT * FROM $tabla WHERE id = $email");
+        $query->bindValue(':email',$email);
+        $query->execute();
+        $user = $query->fetch(PDO::FETCH_ASSOC);
+        return $user;
+    }
+    public function insertUser(User $user)
+    {
+        $name = $user->getName();
+        $lastname = $user->getLastname();
+        $email = $user->getEmail();
+        $password= $user->getPassword();
+        $avatar = $user->getAvatar();
 
         $stmt = $this->pdo->prepare("INSERT INTO users (name, lastname, email, password, avatar) VALUES (:name, :lastname, :email, :password, :avatar)");
 
@@ -66,4 +75,9 @@ class QueryUsers
         $this->db->prepare("UPDATE users SET $setStr WHERE id = :id")->execute($params);
 
     }
+    static public function deleteUser($pdo,$tabla,$user){
+        $stmt= $pdo->prepare("DELETE FROM $tabla WHERE users=:");
+        $stmt->bindValue(':pelicula', $user);
+        $stmt->execute();
+    }    
 }

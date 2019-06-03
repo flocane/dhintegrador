@@ -11,7 +11,7 @@
   require 'Classes/UserFactory.php';
   require 'Classes/Validator.php';
   require 'Classes/Conector.php';
-  require 'Classes/QueryUsers.php';
+  require 'Classes/Querys.php';
   
 
   Session::start();

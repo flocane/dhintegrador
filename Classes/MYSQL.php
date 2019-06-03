@@ -9,46 +9,30 @@ class MYSQL extends Database
         $this->file = $file;
     }
 
-    public function searchMysql($email)
+    static public function searchEmail($pdo,$tabla,$email)
     {
-        $database = $this->read();
-
-        foreach($database as $user) {
-            if($user['email'] == $email) {
-                return $user;
-            }
-        }
-        return false;
+        Querys::getEmail($pdo,$tabla,$email);
     }
 
-    public function saveMysql($userArray)
+    public function saveMysql($user)
     {
-        $prev = $this->read();
-
-        $prev[] = $userArray;
-
-        $json = json_encode($prev);
-
-        file_put_contents($this->file, $json);
+        Querys::inserUser($user);
     }
 
-    public function readMysql()
+    public function readMysql($tabla, $pdo)
     {
-        $content = file_get_contents($this->file);
-
-        return json_decode($content, true);
+        Querys::index($tabla, $pdo);
     }
     
-    public function updateMysql()
+    public function updateMysql($data)
     {
-        //...
+        Querys::updateUser($data);
     }
 
-    public function deleteMysql()
+    public function deleteMysql($pdo,$tabla,$user)
     {
-        //...
+        Querys::deleteUser($pdo,$tabla,$user);
     }
-
 
     public function getFile()
     {

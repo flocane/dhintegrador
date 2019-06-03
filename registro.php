@@ -1,18 +1,16 @@
 <?php
 include_once("Controladores/loader.php");
 if ($_POST){
-  $user = new User($_POST['nombre'], $_POST['apellido'], $_POST['email'], $_POST['password']);
-
+  $user = new User($_POST['nombre'], $_POST['apellido'], $_POST['email'], $_POST['password'],$_POST["rol"]);
   $errores=$validator->validateInput($_POST);
     if(count($errores)==0){
-      $userfind = $db->searchMysql($user->getEmail());
-      QueryUsers::InsertUser($user,$users);
+      $userfind = $db->searchMysql($user->getEmail(),$pdo,'users');
       if($userfind != false){
         $errores["email"]="Usuario ya registrado";
       }else{
         $avatar = $factory->createAvatar($_FILES);
         $userArray=$factory->create($user,$avatar);
-        $db->save($userArray);
+        MYSQL::saveUser($user,$avatar);
         header("location:login.php");
         exit;
         }
