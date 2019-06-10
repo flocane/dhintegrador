@@ -7,7 +7,7 @@ body {
 }
 
 .container{
-margin: 0%;
+margin: 30px;
 padding: 0px;
 width: 100%;
 display: flex;
@@ -98,7 +98,7 @@ display: flex;
     box-shadow: 0 8px 6px -6px #555;
     transition: transform 1s;
   }
-  .carrito.bar span {
+  .carrito .bar span {
     width: 20%;
     opacity: 0.5;
     display: inline-block;

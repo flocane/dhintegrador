@@ -12,9 +12,7 @@ class Querys
     {
         $query = $pdo->prepare("SELECT * FROM $tabla");
         $query->execute();
-
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
-
         return $result;
     }
 
@@ -35,7 +33,7 @@ class Querys
 
     static public function updateUser($pdo,$tabla,$idUser)
     {
-        $query = $pdo->prepare("SELECT $tabla.id, $tabla.name, $tabla.email, $tabla.role from $tabla where $tabla.id = '$idUser'");
+        $query = $pdo->prepare("SELECT $tabla.id, $tabla.name, $tabla.email, $tabla.role from $tabla where $tabla.id = '$id_User'");
         $query->execute();
         $usermodify=$query->fetch(PDO::FETCH_ASSOC);
         return $usermodify;

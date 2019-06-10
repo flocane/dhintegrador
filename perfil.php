@@ -1,6 +1,7 @@
 <?php
 //require 'funciones.php';
-require 'controladores/loader.php';
+require 'Controladores/loader.php';
+
 if($auth->check()) {
 $username = $_SESSION['logged'];
 }
@@ -28,6 +29,9 @@ $username = $_SESSION['logged'];
             </div>
                 <h2> <?=$_SESSION["email"];?> </h2>
             </div>
+            <div class="bar">
+                <span class="one"></span><span class="two"></span><span class="three"></span><span class="four"></span><span class="five"></span>
+            </div>
         <div class='carrito col-10'>
         <form action="" method="POST">
             <img src="img/Logo_aurora.png" alt="Logo de Aurora Materiales
@@ -37,13 +41,7 @@ $username = $_SESSION['logged'];
                 <span class="one"></span><span class="two"></span><span class="three"></span><span class="four"></span><span class="five"></span>
             </div>
             <div>
-                <label for="password">Password</label>
-                    <input name="password"type="email" class="form-control" id="inputEmail" placeholder="Email">
-            </div>
-            <div class="form-group>
-                <label for="repassword">Confirmar Password</label>
-                    <input type="repassword" name="password" class="form-control" id="Password" placeholder="Password">
-            </div>
+            <?php include_once('Users_Folder/modify_Users.php'); ?>
             <div class="bar">
                 <span class="one"></span><span class="two"></span><span class="three"></span><span class="four"></span><span class="five"></span>
             </div>
@@ -57,17 +55,20 @@ $username = $_SESSION['logged'];
             </form>
         </div>
     </div>
-        <div class=container2 col 12>
+    <div class=container2 col 12>
         <div class='carrito col-6'>
-        <form action="" method="POST">
             <img src="img/Logo_aurora.png" alt="Logo de Aurora Materiales
             ">
             <h1>Listado de Usuarios en Base de Datos
             <div class="bar">
                 <span class="one"></span><span class="two"></span><span class="three"></span><span class="four"></span><span class="five"></span>
             </div>
-            </form>
+            <div>
+            <?php include_once('Users_Folder/list_Users.php'); ?>
+            </div>
         </div>
+    </div>
+        <div class=container3 col 12>
         <div class='carrito col-6'>
         <form action="" method="POST">
             <img src="img/Logo_aurora.png" alt="Logo de Aurora Materiales
@@ -78,6 +79,8 @@ $username = $_SESSION['logged'];
             </div>
             </form>
         </div>
+        </div>
+        <div class=container4 col 12>
         <div class='carrito col-6'>
         <form action="" method="POST">
             <img src="img/Logo_aurora.png" alt="Logo de Aurora Materiales
@@ -88,9 +91,9 @@ $username = $_SESSION['logged'];
             </div>
             </form>
         </div>
-</div>
-        <div>
-        <?php include_once('components/footer.php'); ?>
         </div>
+    <div> 
+    <?php include_once('components/footer.php'); ?>
+    </div>
     </body>
 </html>
